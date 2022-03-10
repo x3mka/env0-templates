@@ -7,3 +7,7 @@ resource "aws_instance" "test_instance" {
     instance_type   = "t2.micro"
     subnet_id       = "subnet-5c541774" 
 }
+
+output "instance_id" {
+    value = aws_instance.test_instance.id
+}
