@@ -1,0 +1,1 @@
+# CloudWatch Recommended Alarms for EC2 Instance
