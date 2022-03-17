@@ -1,6 +1,4 @@
-provider "aws" {
-    region = "us-east-1"
-}
+
 
 resource "aws_cloudwatch_metric_alarm" "cpu_utilization" {
   alarm_name          = "EC2: CPU Utilization - ${var.instance_id}"
@@ -36,13 +34,4 @@ resource "aws_cloudwatch_metric_alarm" "status_check_failed" {
 
   alarm_description = "This alarm monitors ec2 instance StatusCheckFailed metric"
   alarm_actions     = [var.sns_topic_arn]
-}
-
-
-output "cpu_utilization_alarm" {
-    value = aws_cloudwatch_metric_alarm.cpu_utilization.arn
-}
-
-output "status_check_failed_alarm" {
-    value = aws_cloudwatch_metric_alarm.status_check_failed.arn
 }
