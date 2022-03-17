@@ -29,3 +29,6 @@ override.tf.json
 # example: *tfplan*
 
 .terraform.lock.hcl
+
+# tfvars are used only for local testing
+terraform.tfvars

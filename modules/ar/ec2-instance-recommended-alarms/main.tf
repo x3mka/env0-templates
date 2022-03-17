@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_utilization" {
   threshold           = "80"
 
   dimensions = {
-    InstanceID = var.instance_id
+    InstanceId = var.instance_id
   }
 
   alarm_description = "This alarm monitors ec2 CPUUtilization metric"
@@ -29,7 +29,7 @@ resource "aws_cloudwatch_metric_alarm" "status_check_failed" {
   threshold           = "1"
 
   dimensions = {
-    InstanceID = var.instance_id
+    InstanceId = var.instance_id
   }
 
   alarm_description = "This alarm monitors ec2 instance StatusCheckFailed metric"
